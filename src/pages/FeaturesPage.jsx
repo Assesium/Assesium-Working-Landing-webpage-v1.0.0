@@ -144,11 +144,11 @@ const FeaturesPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6 dark:text-white light: text-black">
               Powerful Features for
               <span className="block text-assesium-accent">Modern Education</span>
             </h1>
-            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black">
               Discover the comprehensive suite of AI-powered tools designed to transform 
               how schools handle examinations and student assessment.
             </p>
@@ -326,7 +326,7 @@ const FeaturesPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-assesium-accent to-orange-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-assesium-accent to-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -363,7 +363,47 @@ const FeaturesPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="py-20 bg-[#1f2937] text-white">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-transparent">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
+        Ready to Experience These Features?
+      </h2>
+      <p className="text-xl font-opensans mb-8 leading-relaxed">
+        See Assesium in action and discover how these powerful features can transform 
+        your institution's approach to examinations and student assessment.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button 
+          size="lg"
+          className="bg-white text-assesium-accent hover:bg-gray-100 font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-0 border-none shadow-md"
+          asChild
+        >
+          <Link to="/contact">
+            Request a Demo
+            <ArrowRight className="ml-2" size={20} />
+          </Link>
+        </Button>
+        <Button 
+          size="lg"
+          variant="outline"
+          className="font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200 border text-gray-800 border-gray-800 hover:bg-gray-800 hover:text-white dark:text-white dark:border-white dark:hover:bg-black dark:hover:text-assesium-accent"
+          asChild
+        >
+          <Link to="/pricing">View Pricing</Link>
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
     </div>
   )
 }

@@ -88,10 +88,11 @@ const AboutPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6">
-              About Assesium
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6 ">
+             <span className="block text-assesium-accent">About Assesium</span>
+             { /* About Assesium */}
             </h1>
-            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black ">
               We're on a mission to revolutionize education in Kenya through innovative AI technology 
               that empowers teachers and transforms student learning experiences.
             </p>
@@ -340,7 +341,8 @@ const AboutPage = () => {
               <motion.a
                 href="/features"
                 whileHover={{ scale: 1.05 }}
-                className="border-2 border-white text-white hover:bg-white hover:text-assesium-primary font-montserrat font-semibold px-8 py-4 rounded-lg transition-all duration-200 inline-block"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[var(--assesium-dark)] font-montserrat font-semibold px-8 py-4 rounded-lg transition-all duration-200 inline-block"
+
               >
                 Explore Features
               </motion.a>

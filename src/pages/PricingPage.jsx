@@ -223,11 +223,11 @@ const PricingPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6 dark:text-white light: text-black">
               Simple, Transparent
               <span className="block text-assesium-accent">Pricing</span>
             </h1>
-            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black">
               Choose the perfect plan for your institution. Start with credits or subscribe 
               for additional features and better value.
             </p>
@@ -569,10 +569,10 @@ const PricingPage = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6 dark:text-white light: text-black">
               Ready to Get Started?
             </h2>
-            <p className="text-xl font-opensans mb-8 leading-relaxed">
+            <p className="text-xl font-opensans mb-8 leading-relaxed dark:text-white light: text-black">
               Start your free trial today and see how Assesium can transform your institution's 
               approach to examinations and student assessment.
             </p>
@@ -587,7 +587,7 @@ const PricingPage = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-assesium-primary font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
+                className="border border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[var(--assesium-dark)] font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
                 asChild
               >
                 <Link to="/contact">Contact Sales</Link>

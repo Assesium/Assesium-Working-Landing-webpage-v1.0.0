@@ -149,7 +149,7 @@ const LandingPage = () => {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight dark:text-white light: text-black "
             >
               Revolutionizing Education
               <span className="block text-assesium-accent">AI-Powered Exam Marking</span>
@@ -157,7 +157,7 @@ const LandingPage = () => {
             
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl font-opensans mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl font-opensans mb-8 max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black "
             >
               Assesium automates exam marking, provides instant feedback, and delivers actionable analytics, 
               empowering teachers and transforming learning outcomes across Kenya.
@@ -177,10 +177,10 @@ const LandingPage = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-assesium-primary font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
-                asChild
-              >
-                <Link to="/features">Learn More</Link>
+                className="border border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[var(--assesium-dark)] font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
+                >
+               <Link to="/features">Learn More</Link>
+               
               </Button>
             </motion.div>
           </motion.div>
@@ -448,7 +448,7 @@ const LandingPage = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-assesium-accent to-orange-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-assesium-accent to-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -481,7 +481,43 @@ const LandingPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="py-20 !bg-gradient-to-r !from-[#F97316] !to-[#FF5722] !text-white">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-6">
+        Ready to Transform Your School?
+      </h2>
+      <p className="text-xl font-opensans mb-8 leading-relaxed">
+        Join the educational revolution. Request a demo today and see how Assesium 
+        can transform your institution's approach to examinations and student assessment.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Button 
+          size="lg"
+          className="bg-white text-[#F97316] hover:bg-gray-100 font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200 transform hover:scale-105"
+          asChild
+        >
+          <Link to="/contact">
+            Request a Demo Today
+            <ArrowRight className="ml-2" size={20} />
+          </Link>
+        </Button>
+        <div className="flex items-center space-x-2 text-sm">
+          <CheckCircle size={16} />
+          <span>Free consultation included</span>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
     </div>
   )
 }

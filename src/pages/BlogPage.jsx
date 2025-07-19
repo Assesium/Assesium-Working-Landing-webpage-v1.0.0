@@ -109,7 +109,9 @@ const BlogPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6">
-              Insights & Resources
+              {/* Insights & Resources */}
+               <span className="block text-assesium-accent">Insights & Resources</span>
+
             </h1>
             <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
               Stay updated with the latest trends in educational technology, AI innovations, 
@@ -358,7 +360,7 @@ const BlogPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-assesium-accent to-orange-600 text-white">
+      <section className="py-20 bg-[#1f2937] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -387,7 +389,8 @@ const BlogPage = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-assesium-accent font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
+                // className="text-white hover:bg-white hover:text-assesium-accent font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
+                 className="font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200 border text-gray-800 border-gray-800 hover:bg-gray-800 hover:text-white dark:text-white dark:border-white dark:hover:bg-black dark:hover:text-assesium-accent"
                 asChild
               >
                 <Link to="/features">Explore Features</Link>

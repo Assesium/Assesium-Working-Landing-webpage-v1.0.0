@@ -115,7 +115,7 @@ const ContactPage = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -123,9 +123,11 @@ const ContactPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-montserrat font-bold mb-6">
-              Get in Touch
+              {/* Get in Touch */}
+              <span className="block text-assesium-accent">Get in Touch</span>
+
             </h1>
-            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black">
               Ready to transform your institution's approach to examinations? 
               We're here to help you get started with Assesium.
             </p>
@@ -206,19 +208,20 @@ const ContactPage = () => {
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-montserrat font-semibold text-assesium-primary mb-2">
+                      <label htmlFor="name" className="block text-sm font-montserrat font-semibold text-assesium-primary mb-1 ">
                         Full Name *
                       </label>
                       <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
-                        placeholder="Enter your full name"
-                      />
+  type="text"
+  id="name"
+  name="name"
+  value={formData.name}
+  onChange={handleInputChange}
+  required
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+  placeholder="Enter your full name"
+/>
+
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-montserrat font-semibold text-assesium-primary mb-2">
@@ -231,7 +234,11 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans text-black dark:text-white bg-white dark:bg-transparent placeholder-gray-500 dark:placeholder-gray-400"
+
                         placeholder="Enter your email"
                       />
                     </div>
@@ -248,7 +255,11 @@ const ContactPage = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                        // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans text-black dark:text-white bg-white dark:bg-transparent placeholder-gray-500 dark:placeholder-gray-400"
+
                         placeholder="+254 700 123 456"
                       />
                     </div>
@@ -257,11 +268,11 @@ const ContactPage = () => {
                         Your Role
                       </label>
                       <select
-                        id="role"
-                        name="role"
-                        value={formData.role}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                          id="role"
+                          name="role"
+                          value={formData.role}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-black font-opensans focus:outline-none focus:ring-0 focus:border-gray-400 dark:bg-white dark:text-black"
                       >
                         <option value="">Select your role</option>
                         <option value="principal">Principal/Head Teacher</option>
@@ -283,7 +294,11 @@ const ContactPage = () => {
                       name="institution"
                       value={formData.institution}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans"
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans text-black dark:text-white bg-white dark:bg-transparent placeholder-gray-500 dark:placeholder-gray-400"
+
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
                       placeholder="Enter your school/institution name"
                     />
                   </div>
@@ -299,7 +314,11 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans resize-none"
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans resize-none"
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 font-opensans text-black dark:text-black bg-white dark:bg-white placeholder-gray-500 dark:placeholder-gray-500 resize-none"
+                      // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-assesium-accent focus:border-transparent font-opensans text-black dark:text-white bg-white dark:bg-transparent placeholder-gray-500 dark:placeholder-gray-400"
+
                       placeholder="Tell us more about your needs and how we can help..."
                     />
                   </div>
