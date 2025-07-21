@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API base URL - will be different for development and production
 const API_BASE_URL = import.meta.env.VITE_API_URL || 
-'https://assesium-backend-v-0-0-2-lcvz.onrender.com/'
+'https://assesium-backend-v-0-0-2-lcvz.onrender.com/api'
 // 'http://localhost:5000/api';
 
 // Create axios instance
