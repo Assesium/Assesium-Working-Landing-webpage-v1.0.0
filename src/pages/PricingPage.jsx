@@ -1,3 +1,4 @@
+import ChooseYourPlatformToggle from '@/components/ChooseYourPlatformToggle'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { 
@@ -215,7 +216,7 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20">
+      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -232,7 +233,9 @@ const PricingPage = () => {
               for additional features and better value.
             </p>
           </motion.div>
+          
         </div>
+        <ChooseYourPlatformToggle/>
       </section>
 
       {/* Billing Toggle */}

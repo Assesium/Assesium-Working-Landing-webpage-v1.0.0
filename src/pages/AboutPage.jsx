@@ -1,3 +1,4 @@
+import ChooseYourPlatformToggle from '../components/ChooseYourPlatformToggle';
 import { motion } from 'framer-motion'
 import { 
   Target, 
@@ -80,7 +81,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20">
+      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-17">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -97,11 +98,13 @@ const AboutPage = () => {
               that empowers teachers and transforms student learning experiences.
             </p>
           </motion.div>
+          {/* <ChooseYourPlatformToggle/> */}
         </div>
+        <ChooseYourPlatformToggle/>
       </section>
-
+      
       {/* Our Story Section */}
-      <section className="py-20 bg-background">
+      <section className="py-7 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -110,6 +113,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
+              
               <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-assesium-primary dark:text-assesium-accent mb-6">
                 Our Story
               </h2>

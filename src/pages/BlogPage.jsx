@@ -1,3 +1,4 @@
+import ChooseYourPlatformToggle from '@/components/ChooseYourPlatformToggle'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { 
@@ -100,7 +101,7 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20">
+      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -113,16 +114,17 @@ const BlogPage = () => {
                <span className="block text-assesium-accent">Insights & Resources</span>
 
             </h1>
-            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl font-opensans max-w-4xl mx-auto leading-relaxed dark:text-white light: text-black">
               Stay updated with the latest trends in educational technology, AI innovations, 
               and best practices for modern teaching and assessment.
             </p>
           </motion.div>
         </div>
+        <ChooseYourPlatformToggle/>
       </section>
 
       {/* Featured Post */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

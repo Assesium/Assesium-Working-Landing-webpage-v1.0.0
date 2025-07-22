@@ -1,3 +1,5 @@
+
+import ChooseYourPlatformToggle from '../components/ChooseYourPlatformToggle';
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { 
@@ -139,7 +141,8 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20 lg:py-32">
+      {/* <ChooseYourPlatformToggle /> */}
+      <section className="bg-gradient-to-br from-assesium-primary to-assesium-secondary text-white py-20 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"
@@ -162,7 +165,7 @@ const LandingPage = () => {
               Assesium automates exam marking, provides instant feedback, and delivers actionable analytics, 
               empowering teachers and transforming learning outcomes across Kenya.
             </motion.p>
-            
+             <ChooseYourPlatformToggle />
             <motion.div
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -172,6 +175,7 @@ const LandingPage = () => {
                 className="bg-assesium-accent hover:bg-assesium-accent/90 text-white font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200 transform hover:scale-105"
                 asChild
               >
+                
                 <Link to="/contact">Request a Demo</Link>
               </Button>
               <Button 
@@ -180,15 +184,17 @@ const LandingPage = () => {
                 className="border border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[var(--assesium-dark)] font-montserrat font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
                 >
                <Link to="/features">Learn More</Link>
+
+               
                
               </Button>
             </motion.div>
           </motion.div>
         </div>
+        {/* <ChooseYourPlatformToggle /> */}
       </section>
-
-      {/* Problem & Solution Section */}
-      <section className="py-20 bg-assesium-neutral-light">
+      
+      <section className="py-15 bg-assesium-neutral-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
