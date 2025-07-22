@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/custom-route",
+      "destination": "/actual-page"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
